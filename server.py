@@ -12,6 +12,12 @@ server_vc = VectorClock(pid=SERVER_ID)
 def log(msg):
     ts = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     print(f"[{ts}] {msg}", flush=True)
+    
+#  new route add 
+@app.route('/')
+def home():
+    return "✅ Vector Clock RPC Server is running successfully!"
+
 
 @app.route('/rpc', methods=['POST'])
 def rpc():
