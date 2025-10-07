@@ -16,7 +16,7 @@ def log(msg):
 #  new route add 
 @app.route('/')
 def home():
-    return "✅ Vector Clock RPC Server is running successfully!"
+    return " Vector Clock RPC Server is running successfully!"
 
 
 @app.route('/rpc', methods=['POST'])
